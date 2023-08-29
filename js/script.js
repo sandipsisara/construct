@@ -45,6 +45,16 @@ $(document).ready(function () {
         }
     });
 
+    $(window).scroll(function(){
+        var sticky = $('.sticky'),
+              scroll = $(window).scrollTop();
+
+        if (scroll >= 100) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+        });
+
+        
+
     $('#news').owlCarousel({
         loop: false,
         rewind: true,
@@ -110,13 +120,6 @@ $(document).ready(function () {
         }
     });
 
-    $(window).scroll(function () {
-        var sticky = $('.sticky'),
-            scroll = $(window).scrollTop();
-
-        if (scroll >= 100) sticky.addClass('fixed');
-        else sticky.removeClass('fixed');
-    });
 
     setTimeout(function () {
         $('.loaderes').fadeOut();

@@ -2,13 +2,18 @@
     .navbar-brand{
         padding: 12px 15px 17px;
       }
-    .main-menu a{
+    .main-menu li a{
         padding: 15px 15px !important;
         font-weight: bold;
       }
     .button-one{
       margin-left: 0;
     }
+    .main-menu{
+      height: 250px;
+      overflow-y: auto;
+    }
+    
 
 }
 @media screen and (min-width:992px) and (max-width:1199px){
@@ -31,13 +36,31 @@
           line-height: 27px !important;
           letter-spacing: 1px !important;
         }
+        .blog-section .blog-box .autor-post .autor-content,
+        .blog-section .comment-section ul li .comment-box .comment-content  {
+          margin-left: 0
+        }
+        .blog-section .comment-section ul.depth .comment-box{
+          padding-left: 0;
+        }
     }
 
-    @media screen and (min-width:576px)and (max-width:767px) {
-      
+    @media screen and (max-width:767px) {
+      #banner .owl-nav .owl-prev,#banner .owl-nav .owl-next ,
+#portfolio1 .owl-nav .owl-prev,#portfolio1 .owl-nav .owl-next,
+#news .owl-nav .owl-prev,#news .owl-nav .owl-next,#team .owl-nav .owl-prev,
+#team .owl-nav .owl-next{
+  display: none;
+}
       
     }
 
+    @media all and (min-width: 991px) {
+      .navbar .nav-item .dropdown-menu{ display: none; }
+      .navbar .nav-item:hover .dropdown-menu{ display: block; }
+      .navbar .nav-item .dropdown-menu{ margin-top:0; }
+        
+    }
     /* @keyframes loader3{
       from{
           transform: rotate(0deg);
